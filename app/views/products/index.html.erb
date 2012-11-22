@@ -15,12 +15,12 @@
 
 <% @products.each do |product| %>
   <tr>
+    <td><%= image_tag product.image, :height => "175", :width => "200" %></td>
     <td><%= product.name %></td>
     <td><%= product.description %></td>
     <td><%= product.category %></td>
     <td><%= product.quantity %></td>
     <td><%= product.cost %></td>
-    <td><%= product.image %></td>
     <td><%= link_to 'Show', product %></td>
     <td><%= link_to 'Edit', edit_product_path(product) %></td>
     <td><%= link_to 'Destroy', product, confirm: 'Are you sure?', method: :delete %></td>

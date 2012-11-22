@@ -1,0 +1,30 @@
+<div class="products">
+  <h2>
+    <%= product.name %>
+  </h2>
+  <% if product.image.present? %>
+    <p>
+      <%= image_tag product.image, :height => "175" %>
+    </p>
+  <% else %>
+    <p class="no_image">
+      <em>No product image.</em>
+    </p>
+  <% end %>
+  <p>
+    <b>Description:</b>
+    <%= product.description %>
+  </p>
+  <p>
+    <b>Category:</b>
+    <%= product.category %>
+  </p>
+  <p>
+    <b>Quantity:</b>
+    <%= product.quantity %>
+  </p>
+  <p>
+    <b>Price:</b>
+    <%= product.cost %>
+  </p>  
+</div>
