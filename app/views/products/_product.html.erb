@@ -1,4 +1,4 @@
-<div class="products">
+<div class="product">
   <h2>
     <%= product.name %>
   </h2>
@@ -26,5 +26,8 @@
   <p>
     <b>Price:</b>
     <%= product.cost %>
-  </p>  
+  </p>
+  <div class="actions">
+    <%= link_to 'Back', products_path %>
+  </div>
 </div>
