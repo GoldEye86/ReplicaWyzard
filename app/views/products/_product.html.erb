@@ -17,7 +17,11 @@
   </p>
   <p>
     <b>Category:</b>
-    <%= product.category %>
+    <% if product.category.present? %>
+      <%= product.category.name %>
+    <% else %>
+      No Category
+    <% end %>
   </p>
   <p>
     <b>Quantity:</b>
