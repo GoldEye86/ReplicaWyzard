@@ -1,6 +1,8 @@
 class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
+  
+  before_filter :require_sudo, :except => [:show]
   def index
     @products = Product.all
 

@@ -4,7 +4,7 @@
   </h2>
   <% if product.image.present? %>
     <p>
-      <%= image_tag product.image, :height => "175" %>
+      <%= link_to image_tag(product.image, :height => "175"), product %>
     </p>
   <% else %>
     <p class="no_image">
@@ -13,7 +13,11 @@
   <% end %>
   <p>
     <b>Description:</b>
-    <%= product.description %>
+    <% if truncate_it == true then%>
+    <%= truncate(product.description, :length => 40) %> <%= link_to "Read More", product %>
+    <% else %>
+      <%= product.description %>
+    <% end %>
   </p>
   <p>
     <b>Category:</b>
@@ -32,6 +36,7 @@
     <%= product.cost %>
   </p>
   <div class="actions">
-    <%= link_to 'Back', products_path %>
+    <%= link_to 'Show', product %>
+    <%= link_to 'Back', root_path %>
   </div>
 </div>

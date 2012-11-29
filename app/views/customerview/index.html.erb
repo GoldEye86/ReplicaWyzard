@@ -1,6 +1,14 @@
 <h1>Replica Wyzard</h1>
-<h2>Customer View</h2>
+<div id="login">
+  <a><%= link_to "Administrative Login", products_path %></a>
+</div>
+<h2>Search by Category</h2>
+<nav>
+  <a><%= link_to "Blades", products_path %></a>
+  <a><%= link_to "Guns", products_path %></a>
+  <!-- code in sort by category and search -->
+</nav>
 <div class="products">
-  <%= render @products %>
+  <%= render :partial => 'products/product', :collection => @products, :locals => {:truncate_it => true} %>
   
 </div>

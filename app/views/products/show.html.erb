@@ -1,6 +1,6 @@
 <h1>Replica Wyzard</h1>
 <h2>Admin Level</h2>
 <div class="products">
-  <%= render @product %>
+  <%= render :partial => 'product', :object => @product, :locals => {:truncate_it => false} %>
   
 </div>
