@@ -1,0 +1,5 @@
+<h1>Search Results for "<%= @keywords %>"</h1>
+
+<div class="products">
+<%= render :partial => 'products/product', :collection => @products, :locals => {:truncate_it => false} %>
+</div>

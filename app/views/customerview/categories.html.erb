@@ -1,0 +1,11 @@
+<h1>Viewing results by Category for: <%= @category.name %></h1>
+
+<div class="products">
+  <% if @products.empty? %>
+    <h2>There are no results for this category</h2>
+  <% else %>
+    <%= render :partial => 'products/product', :collection => @products, :locals => {:truncate_it => false} %>
+  <% end %>
+  
+  <%= link_to 'Back', root_path %>
+</div>
