@@ -10,6 +10,8 @@ ReplicaWyzard::Application.routes.draw do
   match "/results" => "customerview#search_results", :as => 'results', :via => :post
   
   match "/category/:id" => "customerview#categories", :as => 'category', :via => :get
+  
+  match "/contact" => "customerview#contact_about", :as => 'contact'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

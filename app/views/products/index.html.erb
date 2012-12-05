@@ -1,18 +1,19 @@
+<div id="banner">
+  <%= link_to image_tag("Untitled.png", :height => "190"), root_path %> 
+</div>
 <h1>Listing products</h1>
-
 <table>
   <tr>
+    <th>Image</th>
     <th>Name</th>
     <th>Description</th>
     <th>Category</th>
     <th>Quantity</th>
     <th>Cost</th>
-    <th>Image</th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
-
 <% @products.each do |product| %>
   <tr>
     <td><%= image_tag product.image, :height => "175", :width => "200" %></td>

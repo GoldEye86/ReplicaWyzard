@@ -1,21 +1,28 @@
-<h1>Replica Wyzard</h1>
-<div id="login">
-  <a><%= link_to "Administrative Login", products_path %></a>
+<div id="banner">
+  <%= link_to image_tag("Untitled.png", :height => "190"), root_path %> 
 </div>
-<h2>Search by Keywords:</h2>
-<%= form_tag results_path do %>
-  <%= label_tag "Search" %>
-  <%= text_field_tag(:keywords) %>
-  <%= submit_tag "Search" %>
-<% end %>
-<h2>Search by Category:</h2>
-<nav>
-  <% @categories.each do |c| %>
-    <%= link_to c.name, category_path(c.id) %>
-  <% end %>
-</nav>
 
+  <div id="login">
+    <%= link_to "Administrative Login", products_path %>
+  </div>
+  
+<h2>Search by Keywords:</h2>
+  <%= form_tag results_path do %>
+    <%= text_field_tag(:keywords) %>
+    <%= submit_tag "Search" %>
+  <% end %>
+
+<h2>Search by Category:</h2>
+  <nav>
+    <% @categories.each do |c| %>
+      <%= link_to c.name, category_path(c.id) %>
+    <% end %>
+  </nav>
+  
 <div class="products">
   <%= render :partial => 'products/product', :collection => @products, :locals => {:truncate_it => true} %>
-  
 </div>
+
+<footer>
+  <%= link_to "Contact | About Us", contact_path %>
+</footer>

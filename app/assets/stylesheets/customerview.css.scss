@@ -1,3 +1,35 @@
 // Place all the styles related to the customerview controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+nav {
+  width: 500px;
+  border:2px solid #00c;
+  border-radius:25px;
+  -moz-border-radius:25px;
+  background: #909;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 12pt;
+}
+
+nav a {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+#login a {
+  color: white;
+  border:2px solid #00c;
+  border-radius:25px;
+  -moz-border-radius:25px;
+  background: #909;
+}
+
+#login a:visited {
+  color: #9cf;
+}
+
+#banner {
+  text-align: center;
+}

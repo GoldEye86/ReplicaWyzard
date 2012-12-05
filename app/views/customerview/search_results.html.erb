@@ -1,5 +1,11 @@
+<div id="banner">
+  <%= link_to image_tag("Untitled.png", :height => '190'), root_path %> 
+</div>
 <h1>Search Results for "<%= @keywords %>"</h1>
 
 <div class="products">
 <%= render :partial => 'products/product', :collection => @products, :locals => {:truncate_it => false} %>
+</div>
+<div class="actions">
+  <%= link_to 'Back', root_path %>
 </div>
